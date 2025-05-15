@@ -68,9 +68,13 @@ Optei por esta abordagem porque penso que é mais fácil escalar, alterar o mode
 
 ## **Pontos Bónus:**
   *Tratamento de Erros:*
+  
 	- Texto em falta » Verifica se existe uma frase do utilizador
-	- Texto demasiado longo » Verifica se a frase do utilizar tem mais de 280 caráteres (ex: evitar código, scripts, ruído)
+ 
+	- Texto demasiado longo » Verifica se a frase do utilizar tem mais de 200 caráteres (ex: evitar código, scripts, ruído)
+ 
 	- Texto contém caracteres não permitidos » Verifica se a frase do utilizar tem caracteres não permitidos (ex: evitar código, ataques SQL injection)
+ 
 
 ## **Configuração do ambiente:**
 -   Verificar o conteúdo do ficheiro requirements.txt.
@@ -84,8 +88,22 @@ Optei por esta abordagem porque penso que é mais fácil escalar, alterar o mode
 
 ## **Execução de interação com a API utilizando Postman:**
 
+![image](https://github.com/user-attachments/assets/bf7ed7d7-c664-4133-992e-6bdce72b9858)
+![image](https://github.com/user-attachments/assets/53c900e7-59a4-4763-9c78-a00cb250dbc6)
+![image](https://github.com/user-attachments/assets/3913c219-c0d6-4c72-832d-9cc35571a0ae)
+![image](https://github.com/user-attachments/assets/5e8735bd-94c5-4775-b65c-df1ca6fcd003)
+![image](https://github.com/user-attachments/assets/80722d07-8db2-441f-aaad-8384fd67cdb2)
 
 
+Tratamento de Erros:
+**Texto em falta**
+![image](https://github.com/user-attachments/assets/8a78d3f7-2a78-41a9-a367-94dbd943eb29)
+
+**Texto demasiado longo**
+![image](https://github.com/user-attachments/assets/8188bf64-28c2-48e2-a1ef-b3a88af10316)
+
+**Texto contém caracteres não permitidos**
+![image](https://github.com/user-attachments/assets/2646e1d2-25f8-4c83-ae69-53bf83f84031)
 
 
 ## **Sugestões:**
