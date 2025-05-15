@@ -23,23 +23,40 @@ Como a LogisticRegression do scikit-learn é uma classe que implementa o algorit
  **Estrutura do Projeto:** 
 
   ClassifyAPI/
+  
 │
 ├── app/
+
 │   ├── __init__.py             ← app Flask e junta os módulos
+
 │   ├── routes/
+
 │   │   └── classify.py         ← onde está o endpoint /classify
+
 │   ├── services/
+
 │   │   └── classifier.py       ← onde está a lógica de classificação
+
 │   ├── models/
+
 │   │   └── model.pkl           ← ficheiro do modelo treinado
+
 │
+
 ├── tests/
+
 │   └── test_classify.py        ← testes unitários para o endpoint
+
 │
+
 ├── intent_dataset.json         ← ficheiro de dados
+
 ├── train_model.py              ← script que treina e guarda o modelo
+
 ├── requirements.txt            ← configuração do ambiente (instalação de dependências)
+
 └── run.py                      ← ficheiro que corre a app Flask
+
 
 -   **Rota (`routes/classify.py`)** só trata pedidos e respostas HTTP
     
