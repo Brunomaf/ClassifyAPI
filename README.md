@@ -66,10 +66,10 @@ Optei por esta abordagem porque penso que é mais fácil escalar, alterar o mode
 
 ## **Pontos Bónus:**
   *Testes Automatizados:*
-  Utilizei os vossos exemplos e através de uma ferramenta de IA criei mais 10 exemplos para cada tipo de intenção. Coloquei esses exemplos num ficheiro - test_cases.json. O intuito desta abordagem de testes é saber o grau de confiança e os erros (palavras e/ou frases) que são classificadas erradamente pelo modelo.
+  Utilizei os vossos exemplos e através de uma ferramenta de IA criei mais 10 exemplos para cada tipo de intenção. Coloquei esses exemplos num ficheiro - test_cases.json. Desta forma, o ficheiro test_cases.json contém os casos de teste, e cada caso de teste tem pelo menos dois campos: "text": o texto da entrada e "label": a intenção esperada. O teste guarda a intenção correcta (o campo label que está no ficheiro test_cases.json). O teste envia o texto para a API, a API responde, de seguida o teste extrai a intenção prevista da resposta da API e por ultimo, compara com a intenção esperada. O intuito desta abordagem de testes é saber o grau de confiança e os erros (palavras e/ou frases) que são classificadas erradamente pelo modelo.
 
 Segundo os testes realizados e tendo em conta os vossos exemplos - intent_dataset.json - podemos verificar que existe um grau de confiança médio de 23.6%.
-Da mesma forma, verificamos que o modelo tem que ser mais robusto ou temos que aumentar a amostra de exemplos para treinar melhor o modelo, pois dos 60 testes, 21 falharam.
+Da mesma forma, verificamos que o modelo tem que ser mais robusto, ou temos que classificar melhor a amostra ou temos que aumentar a amostra de exemplos para treinar melhor o modelo, pois dos 60 testes, 21 falharam.
 
   ![image](https://github.com/user-attachments/assets/2b4f40c0-b71f-4695-906d-e2cadbfca165)
 
