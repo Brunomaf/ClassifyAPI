@@ -11,7 +11,7 @@ Tal como descrito nos requisitos a solução foi implementada:
 -  	Como uma API REST.
 -   Endpoint: /classify (método POST).
 -   Input (Request Body - JSON): { "text": "frase do utilizador" }
--   Output (Response Body - JSON): { "intent": "intent_classificada", "confidence_score":  0.2688}
+-   Output (Response Body - JSON): { "intent": "intent_classificada", "confidence_score":  0.2688} - O valor de confiança está entre 0 e 1 (por exemplo, 0.2688), que representa a probabilidade ou grau de confiança da previsão, numa escala decimal.
 
 **Linguagem/Framework:** Python com Flask »» Devido a trabalhar diariamente em Python e já ter desenvolvido alguns projetos em Flask, sinto-me mais confortável ao utilizar Python e Flask.
 
@@ -118,5 +118,8 @@ Tratamento de Erros:
 
 ## **Sugestões:**
 
-- Modelo de Classificação »  Poderíamos utilizar modelos mais complexos como Random Forests ou redes neuronais.
+- Usar perfis como features adicionais no modelo, ou seja, utilizar a frase inserida pelo utilizar mais dados do perfil básico (idade, sexo, categoria de compras preferida, frequência de compras, etc);
+- Modelo de Classificação »  Poderíamos utilizar modelos mais complexos como Random Forests ou redes neuronais;
+- Podiamos criar um "perfil de utilizador" com texto adicional, somando o seu perfil básico às suas interações;
+- Armazenar os perfis como vetores por exemplo com embeddings, de forma a ser ágil a utilização dos perfis no treino de modelos.
 

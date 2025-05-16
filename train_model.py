@@ -15,9 +15,9 @@ nltk.download('stopwords')
 stop_words_pt = stopwords.words("portuguese")
 
 script_dir = os.path.dirname(os.path.abspath(__file__))  # caminho da pasta onde está o script
-dataset_path = os.path.join(script_dir, "intent_dataset.json")  # junta com o nome do ficheiro
+dataset_path = os.path.join(script_dir, "intent_dataset.json")  # junta com o nome do ficheiro de treino
 
-model_path = os.path.join(script_dir, 'app', 'models', 'model.pkl')
+model_path = os.path.join(script_dir, 'app', 'models', 'model.pkl') # caminho onde vai ser guardado o modelo já treinado
 model_path = os.path.abspath(model_path)
 
 # Carregar o dataset
@@ -45,6 +45,10 @@ model.fit(df['text'], df['label'])
 
 # Criar pasta se necessário e guardar modelo
 os.makedirs(os.path.dirname(model_path), exist_ok=True)
-joblib.dump(model, model_path)
 
-print(f"Modelo treinado e guardado em: {model_path}")
+# verifica se o modelo foi guardado corretamente
+try:
+    joblib.dump(model, model_path)
+    print(f"Modelo guardado com sucesso em: {model_path}")
+except Exception as e:
+    print(f"Erro ao guardar o modelo: {e}")

@@ -1,5 +1,4 @@
-flask
-sklearn
-joblib
-pandas
-json
+pip install flask
+pip install scikit-learn
+pip install pandas
+pip install joblib
